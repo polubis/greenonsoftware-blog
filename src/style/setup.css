@@ -1,0 +1,63 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.markdown ol {
+  counter-reset: numbers;
+}
+
+.markdown ol li {
+  counter-increment: numbers;
+}
+
+.markdown ol li::before {
+  content: counter(numbers) '. ';
+}
+
+.markdown ul li:before {
+  content: '- ';
+  display: contents;
+}
+
+.markdown p code,
+.markdown td code {
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.markdown p picture {
+  display: inline-block;
+}
+
+.markdown > div > * {
+  margin-bottom: 10px;
+}
+
+.markdown :is(h2, h3, h4, h5, h6) {
+  margin-top: 24px;
+}
+
+.markdown h1:not(:first-of-type) {
+  margin-top: 24px;
+}
+
+.markdown picture + em {
+  margin-top: 12px;
+}
