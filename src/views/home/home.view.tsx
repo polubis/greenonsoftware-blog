@@ -5,7 +5,7 @@ import { Button } from 'design-system/button';
 
 const HomeView: React.FC = () => {
   return (
-    <div className="py-8 px-20 [&>*]:font-serif">
+    <div className="py-8 px-20 [&>*]:font-body">
       <header className="flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold mb-4 text-indigo-800">BLOG TITLE</h1>
         <nav className="flex w-full border-solid border-gray-200 border-y-2">
@@ -45,20 +45,22 @@ const HomeView: React.FC = () => {
 
 function Navigation() {
   return (
-    <ul className="flex gap-2 flex-1 items-center justify-center [&>*]:px-4 [&>*]:py-2">
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
+    <ul className="flex gap-4 flex-1 items-center justify-center">
+      <Link linkName={'Home'} />
+      <Link linkName={'About'} />
+      <Link linkName={'Services'} />
+      <Link linkName={'Contact'} />
     </ul>
+  );
+}
+
+function Link({ linkName }) {
+  return (
+    <li>
+      <a className="hover:text-lblue font-semibold px-4 py-2" href="#">
+        {linkName}
+      </a>
+    </li>
   );
 }
 
@@ -86,7 +88,7 @@ function ArticlesTop() {
 function ArticlesCenter() {
   return (
     <div className="flex flex-col items-center justify-center pb-16 border-solid border-gray-200 border-b-2 mt-16">
-      <h3 className="my-4 font-bold text-2xl">Trending</h3>
+      <h3 className="my-4 font-bold text-2xl text-indigo-800 ">Trending</h3>
       <div className="grid w-full grid-cols-6 gap-8">
         <Card
           title={`Title`}
@@ -167,7 +169,7 @@ function Card({ title, text, imgSrc }) {
     <div className=" shadow-md rounded overflow-hidden">
       <img src={imgSrc} alt="#" className="w-full h-48 object-cover" />
       <div className="mt-4 text-center">
-        <p className="text-gray-400">{title}</p>
+        <p className="text-lblue">{title}</p>
         <p>{text}</p>
       </div>
     </div>
