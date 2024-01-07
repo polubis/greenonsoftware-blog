@@ -6,9 +6,11 @@ import { Button } from 'design-system/button';
 const HomeView: React.FC = () => {
   return (
     <div className="py-8 px-20 [&>*]:font-body">
-      <header className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold mb-4 text-indigo-800">BLOG TITLE</h1>
-        <nav className="flex w-full border-solid border-gray-200 border-y-2">
+      <header className=" flex flex-col items-center justify-center">
+        <h1 className="relative text-4xl font-bold mb-4  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+          BLOG TITLE
+        </h1>
+        <nav className="flex w-full border-solid border-lblue border-opacity-30 border-y-2">
           <Navigation />
           <ThemeToggler>
             {({ theme, toggleTheme }) => (
@@ -46,10 +48,10 @@ const HomeView: React.FC = () => {
 function Navigation() {
   return (
     <ul className="flex gap-4 flex-1 items-center justify-center">
-      <Link linkName={'Home'} />
-      <Link linkName={'About'} />
-      <Link linkName={'Services'} />
-      <Link linkName={'Contact'} />
+      <Link linkName={`Home`} />
+      <Link linkName={`About`} />
+      <Link linkName={`Services`} />
+      <Link linkName={`Contact`} />
     </ul>
   );
 }
@@ -75,7 +77,7 @@ function ArticlesTop() {
         className={`col-span-2`}
       />
       <Hero
-        imgSrc={`https://images.unsplash.com/photo-1682687220975-7b2df674d3ce?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+        imgSrc={`https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
         title={`Lorem ipsum dolor sit amet, consectetur`}
         subtitle={`subtitle`}
         text={`some text`}
@@ -87,8 +89,10 @@ function ArticlesTop() {
 
 function ArticlesCenter() {
   return (
-    <div className="flex flex-col items-center justify-center pb-16 border-solid border-gray-200 border-b-2 mt-16">
-      <h3 className="my-4 font-bold text-2xl text-indigo-800 ">Trending</h3>
+    <div className="flex flex-col items-center justify-center pb-16 border-solid border-lblue border-opacity-30 border-b-2 mt-16">
+      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+        TRENDING
+      </h3>
       <div className="grid w-full grid-cols-6 gap-8">
         <Card
           title={`Title`}
@@ -149,9 +153,9 @@ function BottomImg({ imgSrc }) {
 
 function Hero({ title, subtitle, text, className, imgSrc }) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative group overflow-hidden  ${className}`}>
       <img
-        className="max-w-full w-full h-96 object-cover"
+        className="transition-all duration-500 ease-in-out delay-150 max-w-full w-full h-96 object-cover group-hover:object-right-top group-hover:scale-110"
         src={imgSrc}
         alt="#"
       ></img>
