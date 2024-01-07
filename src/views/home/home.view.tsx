@@ -7,7 +7,7 @@ const HomeView: React.FC = () => {
   return (
     <div className="py-8 px-20 [&>*]:font-body">
       <header className=" flex flex-col items-center justify-center">
-        <h1 className="relative text-4xl font-bold mb-4  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+        <h1 className="relative text-4xl font-bold mb-12  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
           BLOG TITLE
         </h1>
         <nav className="flex w-full border-solid border-lblue border-opacity-30 border-y-2">
@@ -59,7 +59,10 @@ function Navigation() {
 function Link({ linkName }) {
   return (
     <li>
-      <a className="hover:text-lblue font-semibold px-4 py-2" href="#">
+      <a
+        className="hover:text-lblue font-semibold px-4 py-2 transition duration-300 ease-in-out"
+        href="#"
+      >
         {linkName}
       </a>
     </li>
@@ -68,64 +71,62 @@ function Link({ linkName }) {
 
 function ArticlesTop() {
   return (
-    <div className="grid grid-cols-3 mt-16">
-      <Hero
-        imgSrc={`https://images.unsplash.com/photo-1704504414486-292cc121cd0b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        title={`Lorem ipsum dolor sit amet, consectetur`}
-        subtitle={`subtitle`}
-        text={`some text`}
-        className={`col-span-2`}
-      />
-      <Hero
-        imgSrc={`https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        title={`Lorem ipsum dolor sit amet, consectetur`}
-        subtitle={`subtitle`}
-        text={`some text`}
-        className={``}
-      />
-    </div>
+    <a href="#" className="block">
+      <div className="grid grid-cols-3 mt-16">
+        <Hero
+          imgSrc={`https://images.unsplash.com/photo-1704504414486-292cc121cd0b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          title={`Lorem ipsum dolor sit amet, consectetur`}
+          subtitle={`subtitle`}
+          text={`some text`}
+          className={`col-span-2`}
+        />
+        <Hero
+          imgSrc={`https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          title={`Lorem ipsum dolor sit amet, consectetur`}
+          subtitle={`subtitle`}
+          text={`some text`}
+          className={``}
+        />
+      </div>
+    </a>
   );
 }
 
 function ArticlesCenter() {
   return (
-    <div className="flex flex-col items-center justify-center pb-16 border-solid border-lblue border-opacity-30 border-b-2 mt-16">
-      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
-        TRENDING
-      </h3>
-      <div className="grid w-full grid-cols-6 gap-8">
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
-        <Card
-          title={`Title`}
-          text={`Some text `}
-          imgSrc={`https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
-        />
+    <a href="#" className="block">
+      <div className="flex flex-col items-center justify-center pb-16 border-solid border-lblue border-opacity-30 border-b-2 mt-16">
+        <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+          TRENDING
+        </h3>
+        <div className="grid w-full grid-cols-6 gap-8">
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+          <Card
+            title={`Title`}
+            imgSrc={`https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+          />
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -155,7 +156,7 @@ function Hero({ title, subtitle, text, className, imgSrc }) {
   return (
     <div className={`relative group overflow-hidden  ${className}`}>
       <img
-        className="transition-all duration-500 ease-in-out delay-150 max-w-full w-full h-96 object-cover group-hover:object-right-top group-hover:scale-110"
+        className="transition-all duration-500 ease-in-out delay-150 max-w-full w-full h-96 object-cover group-hover:object-right-bottom group-hover:scale-125"
         src={imgSrc}
         alt="#"
       ></img>
@@ -168,13 +169,15 @@ function Hero({ title, subtitle, text, className, imgSrc }) {
   );
 }
 
-function Card({ title, text, imgSrc }) {
+function Card({ title, imgSrc }) {
   return (
     <div className=" shadow-md rounded overflow-hidden">
       <img src={imgSrc} alt="#" className="w-full h-48 object-cover" />
-      <div className="mt-4 text-center">
-        <p className="text-lblue">{title}</p>
-        <p>{text}</p>
+      <div className="mt-4 text-center pb-4">
+        <p>{title}</p>
+        <button className="text-white bg-lblue px-3 py-1 rounded-sm">
+          Learn more
+        </button>
       </div>
     </div>
   );
