@@ -7,7 +7,7 @@ const HomeView: React.FC = () => {
   return (
     <div className="py-8 px-20 [&>*]:font-body">
       <header className=" flex flex-col items-center justify-center">
-        <h1 className="relative text-4xl font-bold mb-12  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+        <h1 className=" relative text-4xl font-bold mb-12  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-10  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
           BLOG TITLE
         </h1>
         <nav className="flex w-full border-solid border-lblue border-opacity-30 border-y-2">
@@ -93,7 +93,7 @@ function ArticlesTop() {
 function ArticlesCenter() {
   return (
     <div className="flex flex-col items-center justify-center pb-16 border-solid border-lblue border-opacity-30 border-b-2 mt-16">
-      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-50  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 mb-12">
+      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-10  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 mb-12">
         TRENDING
       </h3>
       <div className="grid w-full grid-cols-6 gap-8">
@@ -172,8 +172,8 @@ function Card({ title, imgSrc }) {
     <div className=" shadow-md rounded overflow-hidden">
       <img src={imgSrc} alt="#" className="w-full h-48 object-cover" />
       <div className="mt-4 text-center pb-4">
-        <p>{title}</p>
-        <button className="text-white mt-2 bg-lblue px-3 py-1 rounded-sm hover:bg-dblue hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+        <p className="text-gray-400">{title}</p>
+        <button className="text-white mt-2 bg-lblue bg-opacity-80 px-3 py-1 rounded-sm hover:bg-dblue hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
           Learn more
         </button>
       </div>
