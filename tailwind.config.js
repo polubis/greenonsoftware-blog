@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         lblue: '#1792D2',
+        dblue: '#1274a8',
       },
       fontFamily: {
         body: ['Ubuntu', 'serif'],
