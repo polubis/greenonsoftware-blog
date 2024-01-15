@@ -5,12 +5,12 @@ import { Button } from 'design-system/button';
 
 const HomeView: React.FC = () => {
   return (
-    <div className="py-8 px-20 [&>*]:font-body">
+    <div className="py-8 px-20 [&>*]:font-sans">
       <header className=" flex flex-col items-center justify-center">
-        <h1 className=" relative text-4xl font-bold mb-12  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-10  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 ">
+        <h1 className=" relative text-4xl font-bold mb-12  after:block after:w-full  after:ml-4  after:absolute after:bottom-1 after:-z-10  after:pt-4 after:-skew-x-12 after:bg-blue-400 after:opacity-70">
           BLOG TITLE
         </h1>
-        <nav className="flex w-full border-solid border-lblue border-opacity-30 border-y-2">
+        <nav className="flex w-full border-solid border-blue-400 border-opacity-30 border-y-2">
           <Navigation />
           <ThemeToggler>
             {({ theme, toggleTheme }) => (
@@ -60,7 +60,7 @@ function Link({ linkName }) {
   return (
     <li>
       <a
-        className="hover:text-lblue font-semibold px-4 py-2 transition duration-300 ease-in-out"
+        className="hover:text-blue-400 font-semibold px-4 py-2 transition duration-300 ease-in-out"
         href="#"
       >
         {linkName}
@@ -92,8 +92,8 @@ function ArticlesTop() {
 
 function ArticlesCenter() {
   return (
-    <div className="flex flex-col items-center justify-center pb-16 border-solid border-lblue border-opacity-30 border-b-2 mt-16">
-      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-3  after:absolute after:bottom-1 after:-z-10  after:pt-4 after:-skew-x-12 after:bg-lblue after:opacity-70 mb-12">
+    <div className="flex flex-col items-center justify-center pb-16 border-solid border-blue-400 border-opacity-30 border-b-2 mt-16">
+      <h3 className=" relative my-4 font-bold text-2xl after:block after:w-full  after:ml-2  after:absolute after:bottom-1 after:-z-10  after:pt-3 after:-skew-x-12  after:bg-blue-400 after:opacity-70 mb-12">
         TRENDING
       </h3>
       <div className="grid w-full grid-cols-6 gap-8">
@@ -148,7 +148,7 @@ function BottomImg({ imgSrc }) {
   );
 }
 
-function Hero({ title, category, text, className, imgSrc }) {
+function Hero({ title, category, className, imgSrc }) {
   return (
     <div
       onClick={() => (window.location.href = `#`)}
@@ -173,7 +173,7 @@ function Card({ title, imgSrc }) {
       <img src={imgSrc} alt="#" className="w-full h-48 object-cover" />
       <div className="mt-4 text-center pb-4">
         <p className="text-gray-400">{title}</p>
-        <button className="text-white mt-2 bg-lblue bg-opacity-80 px-3 py-1 rounded-sm hover:bg-dblue hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+        <button className="text-white mt-2 bg-blue-500  px-3 py-1 rounded-sm hover:bg-blue-600 hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
           Learn more
         </button>
       </div>

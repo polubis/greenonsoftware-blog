@@ -13,13 +13,6 @@ module.exports = {
       screens: {
         tn: `400px`,
       },
-      colors: {
-        lblue: '#1792D2',
-        dblue: '#1274a8',
-      },
-      fontFamily: {
-        body: ['Ubuntu', 'serif'],
-      },
     },
   },
   plugins: [],
